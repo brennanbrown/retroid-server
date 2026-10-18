@@ -1,0 +1,14 @@
+# F-Droid installers (~110 MB, re-downloadable)
+apks/
+*.apk
+
+# never commit keys or device secrets
+**/.ssh/
+*.pem
+*.key
+.env*
+
+# macOS / editor noise
+.DS_Store
+*.swp
+*~
