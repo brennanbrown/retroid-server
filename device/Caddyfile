@@ -1,0 +1,4 @@
+:8080 {
+	root * /data/data/com.termux/files/home/www
+	file_server
+}
