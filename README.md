@@ -221,7 +221,11 @@ Host android-server
 ```
 
 Give the device a DHCP reservation (static lease) on your router so its IP
-doesn't change.
+doesn't change. Android 10+ uses a randomized MAC for each saved network by
+default. Set **Wi-Fi → (network) → Privacy → Use device MAC** before creating
+the reservation (or any per-device router rule, like band steering).
+Otherwise forgetting and re-adding the network gives the device a new MAC,
+and a new IP.
 
 To serve your own site, replace the contents of `device/www/` and run
 `scripts/deploy.sh`. Caddy can also act as a reverse proxy or serve HTTPS.
